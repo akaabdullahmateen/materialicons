@@ -1,7 +1,7 @@
 import os
 import shutil
 
-print("Material icons transfer started.")
+print("Material icons transfer started...")
 
 for category in os.listdir("./material-icons"):
 	category_dir = os.path.join("/home/yahya/Downloads/material-icons", category)
