@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>native/circle.png</file>
+        <file>native/close.png</file>
+        <file>native/logo.png</file>
+        <file>native/settings.png</file>
+    </qresource>
+</RCC>
