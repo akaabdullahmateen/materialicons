@@ -17,6 +17,7 @@
 #include <QRegularExpression>
 #include <QScreen>
 #include <QGraphicsEffect>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -47,7 +48,7 @@ void MainWindow::initializeVariables(){
     baseColor           = settings.value("baseColor", "#000000").toString();
     projectFolder       = settings.value("projectFolder", QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)).toString();
     resourceFolder      = settings.value("resourceFolder", QStandardPaths::writableLocation(QStandardPaths::DownloadLocation)).toString();
-    resourcesDirPath    = "/usr/share/materialicons/resources";
+    resourcesDirPath    = "/home/yahya/Documents/projects/materialicons/resources";
 }
 
 void MainWindow::initializeContentLayout(){
@@ -94,6 +95,7 @@ void MainWindow::customizeScrollArea(){
 }
 
 void MainWindow::populateContent(){
+    qDebug() << resourcesDirPath;
     QDir resourcesDir(resourcesDirPath);
     QStringList fileNameList = resourcesDir.entryList(QDir::Files, QDir::Name);
 
